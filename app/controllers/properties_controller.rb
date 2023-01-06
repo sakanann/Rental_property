@@ -13,7 +13,7 @@ class PropertiesController < ApplicationController
   def create
     @property = Property.new(property_params)
     if @property.save
-      redirect_to properties_path notice: "登録しました！"
+      redirect_to properties_path, notice: "登録しました！"
     else
       render :new
     end
@@ -29,7 +29,7 @@ class PropertiesController < ApplicationController
 
   def update
     if @property.update(property_params)
-      redirect_to properties_path notice: "編集しました！"
+      redirect_to properties_path, notice: "編集しました！"
     else
       render :edit
     end
@@ -37,7 +37,7 @@ class PropertiesController < ApplicationController
 
   def destroy
     @property.destroy
-    redirect_to properties_path notice:"削除しました！"
+    redirect_to properties_path, notice:"削除しました！"
   end
 
   private

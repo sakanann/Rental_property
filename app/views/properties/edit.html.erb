@@ -1,2 +1,5 @@
-<h1>Properties#edit</h1>
-<p>Find me in app/views/properties/edit.html.erb</p>
+<h1>物件編集</h1>
+
+<%= render 'form', property: @property %>
+<%= link_to '詳細', @property %> |
+<%= link_to '戻る', properties_path %>
